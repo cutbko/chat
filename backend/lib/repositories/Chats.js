@@ -12,7 +12,7 @@ Chats.prototype =  {
     list: function() {
         var d = Q.defer();
 
-        this.db.chats.find({}, function(error, chatsData) {
+        this.db.chats.find({}, {_id:1, name:1}, function(error, chatsData) {
             if (error) {
                 d.reject(error);
             }

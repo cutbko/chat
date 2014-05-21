@@ -20,4 +20,3 @@ Chats.prototype.create = function(req) {
 };
 
 module.exports = Chats;
-

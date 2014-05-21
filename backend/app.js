@@ -57,10 +57,10 @@ var renderPromise = function(execute) {
 var repositories = require('./lib/repositories')(db);
 var routes       = require('./lib/routes')(repositories);
 
-app.get(  '/api/chats',                 renderPromise(routes.chats.list.bind(routes.chats)));
-app.post( '/api/chats',                 renderPromise(routes.chats.create.bind(routes.chats)));
-// app.get(  '/api/chats/:name/messages',  renderPromise(routes.messages.list.bind(routes.messages)));
-// app.post( '/api/chats/:name/messages',  renderPromise(routes.messages.create.bind(routes.messages)));
+app.get(  '/api/chats',                    renderPromise(routes.chats.list.bind(routes.chats)));
+app.post( '/api/chats',                    renderPromise(routes.chats.create.bind(routes.chats)));
+app.get(  '/api/chats/:chatName/messages', renderPromise(routes.messages.list.bind(routes.messages)));
+app.post( '/api/chats/:chatName/messages', renderPromise(routes.messages.create.bind(routes.messages)));
 
 module.exports = app;
 
