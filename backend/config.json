@@ -1,0 +1,7 @@
+{
+    "app": {
+    "cors_url": "null",
+    "client_patch": "/../frontend/public",
+    "port": 6002
+    }
+}

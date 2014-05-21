@@ -1,0 +1,30 @@
+{
+  "name": "chat-be",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "*",
+    "body-parser":"*",
+    "q": "*",
+    "q-io": "*",
+    "livr": "*",
+    "cors": "*",
+    "lodash": "*",
+    "mongojs": "*",
+    "handlebars": "*",
+    "mocha": "*",
+    "chai": "*",
+    "crypto": "*",
+    "docopt": "*"
+  },
+  "description": "chat back-end",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cutbko/chat.git"
+  },
+  "author": "catcut"
+}
