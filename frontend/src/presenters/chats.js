@@ -11,13 +11,15 @@ function Chats(args) {
 
 Chats.prototype = {
     index: function() {
+        var self = this;
+
         this.ui.setState({
             page: 'chats',
             data: {}
         });
 
         this.api.chats.index().then(function(data) {
-            this.ui.setState({
+            self.ui.setState({
                 page: 'chats',
                 data: data
             });
@@ -27,7 +29,6 @@ Chats.prototype = {
     },
 
     createChat: function(data) {
-            console.log(data);
         this.api.chats.create(data).then( function(){
             location.hash='chats/' + data.name;
         }, function(err) {

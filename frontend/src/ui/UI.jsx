@@ -23,7 +23,7 @@ var PagesPerLayouts = {
 
 var UI = React.createClass({
     getInitialState: function() {
-        return { page: 'chats', data: {} };
+        return { page: 'login', data: {} };
     },
 
     render: function() {
@@ -36,7 +36,7 @@ var UI = React.createClass({
         return(
             <div className="UI">
                 <layout addition={layoutOptions.addition}>
-                    <page pubsub={this.props.pubsub} />
+                    <page pubsub={this.props.pubsub} data={this.state.data}/>
                 </layout>
             </div>
         );

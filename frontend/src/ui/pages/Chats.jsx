@@ -12,11 +12,28 @@ var Footer = require('../components/Panel/PanelFooter.jsx');
 
 var Button = require('../components/Button.jsx');
 var Input = require('../components/Input.jsx');
-var ChatList = require('../components/ChatList.jsx');
 
 var Chats = React.createClass({
     getInitialState: function() {
         return { name:'' };
+    },
+
+    createChatsList: function() {
+        var data = this.props.data;
+
+        var listItems = [];
+        console.log(data);
+
+        (data.chats ? data.chats : []).forEach(function(chat) {
+            console.log(chat.name);
+            listItems.push(
+                <li key={chat.name}>
+                    <a href={'#chats/'+ chat.name}>{chat.name}</a>
+                </li>
+            );
+        });
+
+        return listItems;
     },
 
     handleNameChange: function(e) {
@@ -28,13 +45,16 @@ var Chats = React.createClass({
     },
 
     render: function() {
+        var listItems = this.createChatsList();
 
         return (
             <Panel>
-                <Header title='Chats' />
+                <Header title='Select chat or create a new one' />
 
                 <Body>
-                    <ChatList data='ldfd'/>
+                    <ul>
+                        {listItems}
+                    </ul>
                 </Body>
 
                 <Footer>
