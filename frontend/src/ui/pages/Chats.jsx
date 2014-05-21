@@ -5,17 +5,21 @@
 
 var React = require('react');
 
-
-// var Button = require('../components/Button.jsx');
-// var Link   = require('../components/Link.jsx');
+var Panel = require('../components/Panel/Panel.jsx');
+var Header = require('../components/Panel/PanelHeader.jsx');
+var Body = require('../components/Panel/PanelBody.jsx');
 
 var Chats = React.createClass({
 
     render: function() {
         return (
-            <div className='Chats'  >
-                Chats Page
-            </div>
+            <Panel>
+                <Header title='Chats' />
+
+                <Body>
+                    This is Body!
+                </Body>
+            </Panel>
         );
     }
 });
