@@ -1,7 +1,6 @@
 'use strict';
 
 var util = require('util');
-
 var Base = require('./Base');
 
 function Chats(repositories) {

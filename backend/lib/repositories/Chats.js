@@ -19,7 +19,7 @@ Chats.prototype =  {
             var chats = [];
             if(chatsData) {
                 chatsData.forEach( function(chatData) {
-                    var chat = new User(chatData);
+                    var chat = new Chat(chatData);
                     chat.id  = chat._id.toString();
 
                     chats.push(chat);
@@ -48,7 +48,7 @@ Chats.prototype =  {
                 return;
             }
 
-            d.resolve();
+            d.resolve({});
         });
 
         return d.promise;
