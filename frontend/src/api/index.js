@@ -1,11 +1,9 @@
 'use strict';
 
-var Auth = require('./auth.js');
-var Profile = require('./profile.js');
+var Chats = require('./chats.js');
 
 module.exports = function() {
     return  {
-        auth: new Auth(),
-        profile: new Profile()
+        chats: new Chats()
     };
 };

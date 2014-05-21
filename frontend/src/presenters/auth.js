@@ -15,17 +15,6 @@ Auth.prototype = {
             page: 'login',
             data: {}
         });
-    },
-
-    submitLogin: function(data) {
-        var self = this;
-
-        this.api.auth.login(data).then( function(userData) {
-            self.ui.setState({ page: 'main', data: userData});
-        }, function (err) {
-            console.log(err);
-            self.ui.setState({ page: 'main', data: { error: err}});
-        });
     }
 };
 

@@ -15,6 +15,24 @@ Chats.prototype = {
             page: 'chats',
             data: {}
         });
+
+        this.api.chats.index().then(function(data) {
+            this.ui.setState({
+                page: 'chats',
+                data: data
+            });
+        }, function(err) {
+            console.log(err);
+        });
+    },
+
+    createChat: function(data) {
+            console.log(data);
+        this.api.chats.create(data).then( function(){
+            location.hash='chats/' + data.name;
+        }, function(err) {
+            console.log(err);
+        });
     }
 };
 

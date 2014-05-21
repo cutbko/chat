@@ -15,32 +15,36 @@ var Input = require('../components/Input.jsx');
 var ChatList = require('../components/ChatList.jsx');
 
 var Chats = React.createClass({
+    getInitialState: function() {
+        return { name:'' };
+    },
+
+    handleNameChange: function(e) {
+        this.setState({ name: e.target.value });
+    },
+
+    handleCreateChat: function() {
+        this.props.pubsub.publish('createChat', { name: this.state.name });
+    },
 
     render: function() {
-        var data = [{
-            username:'anita',
-            message:'hello'
-        },{
-            username:'petro',
-            message:'bye'
-        }];
 
         return (
             <Panel>
                 <Header title='Chats' />
 
                 <Body>
-                    <ChatList data={data}/>
+                    <ChatList data='ldfd'/>
                 </Body>
 
                 <Footer>
                     <div className='row'>
-                        <div className='col-xs-7 col-sm-7 col-md-7 col-lg-7 '>
-                            <Input placeholder='Type your message'/>
+                        <div className='col-xs-9 col-sm-9 col-md-9 col-lg-9 '>
+                            <Input placeholder='Enter chat name' onChange={this.handleNameChange}/>
                         </div>
 
                         <div className='col-xs-3 col-sm-3 col-md-3 col-lg-3'>
-                            <Button value='Send' style='primary' />
+                            <Button value='Create' style='primary' onClick={this.handleCreateChat}/>
                         </div>
                     </div>
                 </Footer>

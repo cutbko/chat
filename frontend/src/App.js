@@ -22,9 +22,13 @@ App.prototype = {
 
         // pubsub subscribe
 
-        this.pubsub.subscribe('submitLogin', function(data) {
+        this.pubsub.subscribe('submitLogin', function(_, data) {
             // self.presenters.auth.submitLogin(data);
             location.hash='chats';
+        });
+
+        this.pubsub.subscribe('createChat', function(_, data) {
+            self.presenters.chats.createChat(data);
         });
 
         this.router.start();
