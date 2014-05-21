@@ -37,9 +37,6 @@ var Input = React.createClass({
 
         return (
             <div className={mainCSS}>
-                <label>
-                    {!this.props.labelPosition ? this.props.label  : ''}
-
                     <input type={this.props.type}
                            className={inputCSS}
                            id={this.props.id}
@@ -55,10 +52,6 @@ var Input = React.createClass({
                         {this.props.children}
                     </input>
 
-                    { this.props.type=='checkbox' ? <i></i>: '' }
-
-                    { this.props.labelPosition=='bottom' ? this.props.label : ''}
-                </label>
             </div>
         );
     }

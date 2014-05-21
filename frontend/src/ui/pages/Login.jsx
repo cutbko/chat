@@ -27,14 +27,12 @@ var Login = React.createClass({
 
     render: function() {
         return (
-            <Dialog>
-                <Header>
-                    Please, type your User Name
-                </Header>
+            <Dialog show='true'>
+                <Header title='Type your Username'/>
 
                 <Body>
-                    <Input placeholder='Username' onChange={this.handleUsernameChange} />
-                    <Button style='primary' value='Submit'/>
+                    <Input type='text' placeholder='Username' onChange={this.handleUsernameChange} />
+                    <Button style='primary' value='Submit' offset='top'/>
                 </Body>
             </Dialog>
         );

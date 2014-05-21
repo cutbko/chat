@@ -29,7 +29,8 @@ var Button = React.createClass({
             'btn-xs' : this.props.size=='smallest',
             'm-r-sm' : this.props.offset=='right',
             'm-l-sm' : this.props.offset=='left',
-            'm-l-sm m-b-sm' : this.props.offset=='left-bottom'
+            'm-l-sm m-b-sm' : this.props.offset=='left-bottom',
+            'm-t-sm' : this.props.offset=='top'
         });
 
         return (
