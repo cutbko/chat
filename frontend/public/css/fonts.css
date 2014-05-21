@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Michroma';
+  src: url('fonts/Michroma.eot'); /* IE9 Compat Modes */
+  src: url('fonts/Michroma.eot?#iefix') format('embedded-opentype'),
+       url('fonts/Michroma.woff') format('woff'),
+       url('fonts/Michroma.ttf')  format('truetype'),
+       url('fonts/Michroma.svg#svgFontName') format('svg'); /* Legacy iOS */
+    font-style: normal;
+}

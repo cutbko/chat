@@ -1,0 +1,32 @@
+{
+  "name": "chatFE",
+  "version": "0.0.1",
+  "description": "chatFE",
+  "repository": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "public/js/bower_components"
+  ],
+  "dependencies": {
+    "react": "~0.10.0",
+    "q": "*",
+    "react-classset": "*",
+    "jquery": "*",
+    "pubsub-js": "*",
+    "react-bootstrap": "*",
+    "backbone": "~1.1.2"
+  },
+  "devDependencies": {
+    "jsx-loader": "petehunt/jsx-loader",
+    "jsxhint": "*",
+    "webpack": "*",
+    "url-loader": "*",
+    "css-loader": "*",
+    "jshint-loader": "*",
+    "style-loader": "*"
+  },
+  "scripts": {
+    "start": "webpack -d --watch --colors  src/main.js public/build/main.js"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "chatFE",
+  "version": "0.0.1",
+  "main": "/public/css/main.css",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "public/js/bower_components"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.0",
+    "bootstrap": "~3.1.1"
+  }
+}

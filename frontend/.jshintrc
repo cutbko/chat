@@ -1,0 +1,26 @@
+{
+  // Env
+  "browser": true,
+  "node": true,
+  "jquery": true,
+
+  // Restrictions
+  "bitwise": true,
+  "newcap": false,
+  "noempty": true,
+  "esnext": true,
+  "globalstrict": true,
+  "freeze": true,
+  "undef": true,
+  "unused": true,
+  "maxcomplexity": 25,
+  "latedef": true,
+  "smarttabs": false,
+  "trailing": true,
+
+  // Style
+  "maxparams": 4,
+  "indent": 4,
+
+  "globals": {}
+}
