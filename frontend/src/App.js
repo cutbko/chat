@@ -30,7 +30,6 @@ App.prototype = {
     },
 
     _renderUI: function() {
-        console.log(this.ui);
         React.renderComponent(this.ui, document.getElementById('content'));
     }
 };

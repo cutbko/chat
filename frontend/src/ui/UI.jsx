@@ -9,7 +9,6 @@ require('./UI.css');
 
 var PAGES = {
     'login'        : require('./pages/Login.jsx') ,
-    'restore-pass' : require('./pages/RestorePass.jsx'),
     'home'         : require('./pages/Home.jsx')
 };
 
@@ -20,7 +19,6 @@ var LAYOUTS = {
 
 var PagesPerLayouts = {
     'login'        : { layout: 'auth' , addition: { class: 'medium' } },
-    'restore-pass' : { layout: 'auth' , addition: { class: 'medium' } },
     'home' : { layout: 'main' , addition: {} }
 };
 
