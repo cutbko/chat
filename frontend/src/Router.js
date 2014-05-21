@@ -11,15 +11,15 @@ function Router(args) {
         routes: {
             ''             : 'login',
             'login'        : 'login',
-            'home'         : 'home'
+            'chats'         : 'chats'
         },
 
         login: function() {
             presenters.auth.loginForm();
         },
 
-        home: function() {
-            presenters.home.index();
+        chats: function() {
+            presenters.chats.index();
         }
     });
 

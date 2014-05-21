@@ -23,7 +23,8 @@ App.prototype = {
         // pubsub subscribe
 
         this.pubsub.subscribe('submitLogin', function(data) {
-            self.presenters.auth.submitLogin(data);
+            // self.presenters.auth.submitLogin(data);
+            location.hash='chats';
         });
 
         this.router.start();

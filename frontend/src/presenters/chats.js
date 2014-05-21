@@ -1,6 +1,6 @@
 'use strict';
 
-function Home(args) {
+function Chats(args) {
     if (!args.api) throw "api required";
     if (!args.ui) throw "ui required";
 
@@ -9,14 +9,14 @@ function Home(args) {
     this.router = args.router;
 }
 
-Home.prototype = {
+Chats.prototype = {
     index: function() {
         this.ui.setState({
-            page: 'home',
+            page: 'chats',
             data: {}
         });
     }
 };
 
 
-module.exports = Home;
+module.exports = Chats;

@@ -17,20 +17,6 @@ Auth.prototype = {
         });
     },
 
-    registerForm: function() {
-        this.ui.setState({
-            page: 'register',
-            data: {}
-        });
-    },
-
-    restorePassForm: function() {
-        this.ui.setState({
-            page: 'restore-pass',
-            data: {}
-        });
-    },
-
     submitLogin: function(data) {
         var self = this;
 

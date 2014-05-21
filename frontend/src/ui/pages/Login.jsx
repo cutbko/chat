@@ -17,7 +17,7 @@ var Login = React.createClass({
         return { username:'' };
     },
 
-    handleusernameChange: function (e) {
+    handleUsernameChange: function (e) {
         this.setState({ username: e.target.value });
     },
 
@@ -32,7 +32,7 @@ var Login = React.createClass({
 
                 <Body>
                     <Input type='text' placeholder='Username' onChange={this.handleUsernameChange} />
-                    <Button style='primary' value='Submit' offset='top'/>
+                    <Button style='primary' value='Submit' offset='top' onClick={this.handleSubmit}/>
                 </Body>
             </Dialog>
         );

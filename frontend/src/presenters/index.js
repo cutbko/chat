@@ -1,12 +1,12 @@
 'use strict';
 
 var auth = require('./auth');
-var home = require('./home');
+var chats = require('./chats');
 
 function init(args) {
     return {
         auth: new auth(args),
-        home: new home(args)
+        chats: new chats(args)
     };
 }
 

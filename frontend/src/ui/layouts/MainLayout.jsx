@@ -10,10 +10,8 @@ var MainLayout = React.createClass({
 
     render: function() {
         return (
-            <div className='MainLayout'>
-                <div className='content'>
-                    {this.props.children}
-                </div>
+            <div className='MainLayout container'>
+                {this.props.children}
             </div>
         );
     }

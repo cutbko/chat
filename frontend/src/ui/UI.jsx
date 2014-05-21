@@ -9,7 +9,7 @@ require('./UI.css');
 
 var PAGES = {
     'login'        : require('./pages/Login.jsx') ,
-    'home'         : require('./pages/Home.jsx')
+    'chats'         : require('./pages/Chats.jsx')
 };
 
 var LAYOUTS = {
@@ -18,12 +18,12 @@ var LAYOUTS = {
 
 var PagesPerLayouts = {
     'login'        : { layout: 'main' },
-    'home'         : { layout: 'main' }
+    'chats'         : { layout: 'main' }
 };
 
 var UI = React.createClass({
     getInitialState: function() {
-        return { page: 'home', data: {} };
+        return { page: 'chats', data: {} };
     },
 
     render: function() {

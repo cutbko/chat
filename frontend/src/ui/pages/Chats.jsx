@@ -9,16 +9,16 @@ var React = require('react');
 // var Button = require('../components/Button.jsx');
 // var Link   = require('../components/Link.jsx');
 
-var Home = React.createClass({
+var Chats = React.createClass({
 
     render: function() {
         return (
-            <div className='Home'  >
-                Home Page
+            <div className='Chats'  >
+                Chats Page
             </div>
         );
     }
 });
 
-module.exports = Home;
+module.exports = Chats;
 
