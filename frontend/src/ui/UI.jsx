@@ -13,13 +13,12 @@ var PAGES = {
 };
 
 var LAYOUTS = {
-    'auth' : require('./layouts/AuthLayout.jsx'),
     'main' : require('./layouts/MainLayout.jsx')
 };
 
 var PagesPerLayouts = {
-    'login'        : { layout: 'auth' , addition: { class: 'medium' } },
-    'home' : { layout: 'main' , addition: {} }
+    'login'        : { layout: 'main' },
+    'home'         : { layout: 'main' }
 };
 
 var UI = React.createClass({
