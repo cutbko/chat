@@ -11,7 +11,8 @@ function Router(args) {
         routes: {
             ''             : 'login',
             'login'        : 'login',
-            'chats'         : 'chats'
+            'chats'         : 'chats',
+            'chats/:chatname' : 'chat'
         },
 
         login: function() {
@@ -20,6 +21,10 @@ function Router(args) {
 
         chats: function() {
             presenters.chats.index();
+        },
+
+        chat: function(chatname) {
+            presenters.messages.index(chatname);
         }
     });
 

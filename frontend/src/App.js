@@ -31,6 +31,10 @@ App.prototype = {
             self.presenters.chats.createChat(data);
         });
 
+        this.pubsub.subscribe('sendMessage', function(_, data) {
+            self.presenters.messages.send(data.chatname, data.message);
+        });
+
         this.router.start();
     },
 

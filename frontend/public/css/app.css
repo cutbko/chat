@@ -1,0 +1,7 @@
+.panel-default>.panel-heading {
+    color:#808080;
+    font-weight: 400;
+    background: #fafafa;
+    text-transform: uppercase;
+    padding: 15px;
+}
