@@ -15,52 +15,58 @@ var Input = require('../components/Input.jsx');
 
 var Chats = React.createClass({
     getInitialState: function() {
-        return { name:'' };
+        return { message:'' };
     },
 
-    createChatsList: function() {
+    createMessagesList: function() {
         var data = this.props.data;
 
         var listItems = [];
 
-        (data.chats ? data.chats : []).forEach(function(chat) {
+        (data.messages ? data.messages : []).forEach(function(message) {
             listItems.push(
-                    <a className='list-group-item' key={chat.name} href={'#chats/'+ chat.name}>{chat.name}</a>
+                <li>
+                    <div className=''>
+                        <p>{message.user} at {message.dateCreated}</p>
+                        <p>{message.message}</p>
+                    </div>
+                </li>
             );
         });
 
         return listItems;
     },
 
-    handleNameChange: function(e) {
-        this.setState({ name: e.target.value });
+    handleMessageChange: function(e) {
+        this.setState({ message: e.target.value });
     },
 
-    handleCreateChat: function() {
-        this.props.pubsub.publish('createChat', { name: this.state.name });
+    handleSendMessage: function() {
+        this.props.pubsub.publish('sendMessage', { message: this.state.message });
     },
 
     render: function() {
-        var listItems = this.createChatsList();
+        var listItems = this.createMessagesList();
+        var data = this.props.data;
 
         return (
             <Panel>
-                <Header title='Select chat or create a new one' />
+                <Header title={data.name} />
 
                 <Body>
-                    <div className='list-group'>
+                    <ul className='list-group'>
                         {listItems}
-                    </div>
+                    </ul>
                 </Body>
 
                 <Footer>
                     <div className='row'>
                         <div className='col-xs-9 col-sm-9 col-md-9 col-lg-9 '>
-                            <Input placeholder='Enter chat name' onChange={this.handleNameChange}/>
+                            <Input placeholder='Type your message...' onChange={this.handleMessageChange}/>
                         </div>
 
                         <div className='col-xs-3 col-sm-3 col-md-3 col-lg-3'>
-                            <Button value='Create' style='primary' onClick={this.handleCreateChat} position='right'/>
+                            <Button value='Send' style='primary' onClick={this.handleSendMessage} position='right'/>
                         </div>
                     </div>
                 </Footer>

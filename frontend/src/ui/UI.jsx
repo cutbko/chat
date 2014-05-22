@@ -9,7 +9,8 @@ require('./UI.css');
 
 var PAGES = {
     'login'        : require('./pages/Login.jsx') ,
-    'chats'         : require('./pages/Chats.jsx')
+    'chats'         : require('./pages/Chats.jsx'),
+    'chat'         : require('./pages/Chat.jsx')
 };
 
 var LAYOUTS = {
@@ -18,7 +19,8 @@ var LAYOUTS = {
 
 var PagesPerLayouts = {
     'login'        : { layout: 'main' },
-    'chats'         : { layout: 'main' }
+    'chats'         : { layout: 'main' },
+    'chat'         : { layout: 'main' }
 };
 
 var UI = React.createClass({
