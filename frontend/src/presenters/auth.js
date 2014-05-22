@@ -15,31 +15,6 @@ Auth.prototype = {
             page: 'login',
             data: {}
         });
-    },
-
-    registerForm: function() {
-        this.ui.setState({
-            page: 'register',
-            data: {}
-        });
-    },
-
-    restorePassForm: function() {
-        this.ui.setState({
-            page: 'restore-pass',
-            data: {}
-        });
-    },
-
-    submitLogin: function(data) {
-        var self = this;
-
-        this.api.auth.login(data).then( function(userData) {
-            self.ui.setState({ page: 'main', data: userData});
-        }, function (err) {
-            console.log(err);
-            self.ui.setState({ page: 'main', data: { error: err}});
-        });
     }
 };
 

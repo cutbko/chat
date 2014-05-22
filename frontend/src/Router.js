@@ -11,20 +11,15 @@ function Router(args) {
         routes: {
             ''             : 'login',
             'login'        : 'login',
-            'restore-pass' : 'restorePass',
-            'home'         : 'home'
+            'chats'         : 'chats'
         },
 
         login: function() {
             presenters.auth.loginForm();
         },
 
-        restorePass: function() {
-            presenters.auth.restorePassForm();
-        },
-
-        home: function() {
-            presenters.home.index();
+        chats: function() {
+            presenters.chats.index();
         }
     });
 

@@ -41,3 +41,19 @@ a {
 .clearfix {
     clear: both;
 }
+
+.show {
+    display: block;
+}
+.m-l-sm {
+    margin-left:10px;
+}
+.m-r-sm {
+    margin-right:10px;
+}
+.m-t-sm {
+    margin-top:10px;
+}
+.m-b-sm {
+    margin-bottom:10px;
+}

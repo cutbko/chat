@@ -9,22 +9,21 @@ require('./UI.css');
 
 var PAGES = {
     'login'        : require('./pages/Login.jsx') ,
-    'home'         : require('./pages/Home.jsx')
+    'chats'         : require('./pages/Chats.jsx')
 };
 
 var LAYOUTS = {
-    'auth' : require('./layouts/AuthLayout.jsx'),
     'main' : require('./layouts/MainLayout.jsx')
 };
 
 var PagesPerLayouts = {
-    'login'        : { layout: 'auth' , addition: { class: 'medium' } },
-    'home' : { layout: 'main' , addition: {} }
+    'login'        : { layout: 'main' },
+    'chats'         : { layout: 'main' }
 };
 
 var UI = React.createClass({
     getInitialState: function() {
-        return { page: 'home', data: {} };
+        return { page: 'login', data: {} };
     },
 
     render: function() {
@@ -37,7 +36,7 @@ var UI = React.createClass({
         return(
             <div className="UI">
                 <layout addition={layoutOptions.addition}>
-                    <page pubsub={this.props.pubsub} />
+                    <page pubsub={this.props.pubsub} data={this.state.data}/>
                 </layout>
             </div>
         );

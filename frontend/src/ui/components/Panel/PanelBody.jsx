@@ -3,18 +3,17 @@
  */
 'use strict';
 
-var React = require('react/addons');
+var React = require('react');
 
-
-var MainLayout = React.createClass({
+var PanelBody = React.createClass({
 
     render: function() {
         return (
-            <div className='MainLayout container'>
+            <div className='PanelBody panel-body' >
                 {this.props.children}
             </div>
         );
     }
 });
 
-module.exports = MainLayout;
+module.exports = PanelBody;
